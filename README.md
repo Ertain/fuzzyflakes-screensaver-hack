@@ -1,4 +1,4 @@
-* Hacked screensaver with an Azumanga Daioh look to it
+##Hacked screensaver with an Azumanga Daioh look to it
 
 -----------------
 
@@ -27,7 +27,7 @@ can be achieved.
 -----------------
 * For building this screensaver
 
-- Note: I built this screensaver on a pretty good computer (Intel i7-2600
+**Note**: I built this screensaver on a pretty good computer (Intel i7-2600
 quadcore CPU with an nVidia GeForce GT 570 GPU and 8 Gigs of RAM) and I
 used Linux Mint 14 64-bit edition.
 
@@ -45,14 +45,14 @@ and drop in this one.
 3. Look in the supplied Makefile and scroll down to line 800.  There
 you'll find a line similar to this:
 
-fuzzyflakes:	fuzzyflakes.o	$(HACK_OBJS) 
-	$(CC_HACK) -g -o $@ $@.o $(HACK_OBJS) $(HACK_LIBS)
+`fuzzyflakes:	fuzzyflakes.o	$(HACK_OBJS)`
+    `$(CC_HACK) -g -o $@ $@.o $(HACK_OBJS) $(HACK_LIBS)`
 
 First generate the official Makefile for the Xscreensaver.  Then open
 up the resulting Makefile and change those lines to this:
 
-fuzzyflakes:	fuzzyflakes.o	$(HACK_OBJS) 
-	$(CC_HACK) `pkg-config --cflags cairo` -g -o $@ $@.o	$(HACK_OBJS) $(HACK_LIBS) -lcairo
+`fuzzyflakes:	fuzzyflakes.o	$(HACK_OBJS)`
+    `$(CC_HACK) `pkg-config --cflags cairo` -g -o $@ $@.o	$(HACK_OBJS) $(HACK_LIBS) -lcairo`
 
 4. Open up a command line to the Xscreensaver directory, type "make", and
 cross your fingers.  If I have written these directions correctly the
@@ -93,7 +93,9 @@ funniest anime ever.
 * Credits
 
 Original Writer of Fuzzyflakes: Barry Dmytro <badcherry@mailc.net>
+
 Guy who hacked this together:	Jason Anderson <jasona.594 (at) gmail.com>
+
 One contributor:		Joshua Ryan <luser.droog (at) gmail.com>
 
 All rights reserved.  Code copyright 2004-2013, released under the terms of
